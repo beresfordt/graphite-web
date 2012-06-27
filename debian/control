@@ -1,8 +1,7 @@
 Source: graphite-web
 Section: web
 Priority: extra
-Maintainer: Debian Python Modules Team <python-modules-team@lists.alioth.debian.org>
-Uploaders: Jonas Genannt <jonas.genannt@capi2name.de>
+Maintainer: Jonas Genannt <jonas.genannt@capi2name.de>
 Build-Depends: debhelper (>= 8), python-all (>= 2.6.6-3~)
 Standards-Version: 3.9.2
 Homepage: https://launchpad.net/graphite
