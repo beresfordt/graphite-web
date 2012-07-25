@@ -11,8 +11,9 @@ graphite-web (0.9.10-1.1) unstable; urgency=low
   * Patched cli.html to use debian packaged js
   * Patched composer.html to use debian packaged js
   * Patched graphlot.html to use debian packaged js
+  * Updated rules so no embedded libs are not included, aside from some extjs which is not available in debian package yet
 
- -- Tom Beresford <tom.beresford@bskyb.com>  Wed, 25 Jul 2012 14:35:24 +0100
+ -- Tom Beresford <tom.beresford@bskyb.com>  Wed, 25 Jul 2012 15:35:24 +0100
 
 graphite-web (0.9.9-1) unstable; urgency=low
 

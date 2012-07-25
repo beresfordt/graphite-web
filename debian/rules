@@ -13,6 +13,10 @@ override_dh_install:
 	mv debian/graphite-web/usr/webapp/content debian/graphite-web/usr/share/graphite-web/static
 	[ -d debian/graphite-web/usr/webapp ] && rm -rf debian/graphite-web/usr/webapp
 	find debian/graphite-web -type f -name local_settings.py -exec rm {} \;
-	dh_install
-
-
+	[ -d debian/graphite-web/usr/share/graphite-web/static/js/scriptaculous ] && rm -rf debian/graphite-web/usr/share/graphite-web/static/js/scriptaculous
+	[ -f debian/graphite-web/usr/share/graphite-web/static/js/jquery.js ] && rm debian/graphite-web/usr/share/graphite-web/static/js/jquery.js
+	[ -f debian/graphite-web/usr/share/graphite-web/static/js/jquery.flot.crosshair.js ] && rm debian/graphite-web/usr/share/graphite-web/static/js/jquery.flot.crosshair.js
+	[ -f debian/graphite-web/usr/share/graphite-web/static/js/jquery.flot.js ] && rm debian/graphite-web/usr/share/graphite-web/static/js/jquery.flot.js
+	[ -f debian/graphite-web/usr/share/graphite-web/static/js/jquery.flot.selection.js ] && rm debian/graphite-web/usr/share/graphite-web/static/js/jquery.flot.selection.js
+	[ -f debian/graphite-web/usr/share/graphite-web/static/js/window/prototype.js ] && rm debian/graphite-web/usr/share/graphite-web/static/js/window/prototype.js
+	[ -f debian/graphite-web/usr/share/graphite-web/static/js/window/effects.js ] && rm debian/graphite-web/usr/share/graphite-web/static/js/window/effects.js
