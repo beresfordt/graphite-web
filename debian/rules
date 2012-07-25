@@ -20,3 +20,4 @@ override_dh_install:
 	[ -f debian/graphite-web/usr/share/graphite-web/static/js/jquery.flot.selection.js ] && rm debian/graphite-web/usr/share/graphite-web/static/js/jquery.flot.selection.js
 	[ -f debian/graphite-web/usr/share/graphite-web/static/js/window/prototype.js ] && rm debian/graphite-web/usr/share/graphite-web/static/js/window/prototype.js
 	[ -f debian/graphite-web/usr/share/graphite-web/static/js/window/effects.js ] && rm debian/graphite-web/usr/share/graphite-web/static/js/window/effects.js
+	dh_install
