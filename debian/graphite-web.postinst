@@ -7,6 +7,12 @@ if [ "$1" = configure ]; then
 		adduser --system --quiet --home /var/lib/graphite --no-create-home \
 			--shell /bin/false --force-badname --group --gecos "Graphite User" _graphite
 	fi
+
+    # put local-settings in place
+    cp /usr/share/pyshared/graphite/local_settings.py.example /etc/graphite/local_settings.py
+    ln -s /etc/graphite/local_settings.py /usr/share/pyshared/graphite/local_settings.py
+    ln -s /etc/graphite/local_settings.py /usr/lib/python2.6/dist-packages/graphite/local_settings.py
+
 fi
 
 #DEBHELPER#
