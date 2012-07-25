@@ -1,2 +1,3 @@
 etc/graphite
 var/log/graphite
+/usr/share/graphite-web/storage
