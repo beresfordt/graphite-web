@@ -1,3 +1,4 @@
+use_js_packages_in_cli.patch
 set_local_settings.patch
 disable_log_set.patch
 disable_examples_install.patch
