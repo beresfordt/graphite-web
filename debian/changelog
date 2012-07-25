@@ -3,6 +3,7 @@ graphite-web (0.9.10-1.1) unstable; urgency=low
   * Non-maintainer upload.
   * New upstream release
   * Added ldap as a reccomended, updated requires to include wsgi and sqlite
+  * Included install of examples
 
  -- Tom Beresford <tom.beresford@bskyb.com>  Wed, 25 Jul 2012 11:01:24 +0100
 
