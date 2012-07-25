@@ -14,8 +14,10 @@ Depends: ${misc:Depends}, ${python:Depends},
  python-cairo,
  python-django,
  python-simplejson,
- python-django-tagging
-Suggests: python-memcache, libapache2-mod-wsgi
+ python-django-tagging,
+ python-sqlite,
+ libapache2-mod-wsgi
+Suggests: python-memcache, python-ldap
 Description: Enterprise Scalable Realtime Graphing
  Graphite consists of a storage backend and a web-based visualization
  frontend. Client applications send streams of numeric time-series
