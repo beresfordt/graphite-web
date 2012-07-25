@@ -13,6 +13,30 @@ if [ "$1" = configure ]; then
     ln -s /etc/graphite/local_settings.py /usr/share/pyshared/graphite/local_settings.py
     ln -s /etc/graphite/local_settings.py /usr/lib/python2.6/dist-packages/graphite/local_settings.py
 
+    # disable default site if enabled
+    if [ -L /etc/apache2/sites-enabled/000-default ]; then
+        a2dissite 000-default
+    fi
+
+    # disable existing site if enabled
+    if [ -L /etc/apache2/sites-enabled/apache2-graphite.conf ]; then
+        a2dissite apache2-graphite.conf
+    fi    
+
+    # remove available site if link, divert if file
+    if [ -L /etc/apache2/sites-available/apache2-graphite.conf ]; then
+        rm /etc/apache2/sites-available/apache2-graphite.conf
+    fi
+
+    # create link to conf
+    ln -s /usr/share/graphite-web/apache2-graphite.conf /etc/apache2/sites-available/apache2-graphite.conf
+
+    # enable site
+    a2ensite apache2-graphite.conf
+
+    # reload apache config
+    invoke-rc.d apache2 reload
+
 fi
 
 #DEBHELPER#

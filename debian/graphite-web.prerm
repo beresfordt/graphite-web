@@ -1,0 +1,17 @@
+#!/bin/sh
+
+set -e
+
+if [ "$1" = remove ]; then
+
+    # disable site
+    a2dissite apache2-graphite.conf
+
+    # remove link
+    if [ -L /etc/apache2/sites-available/apache2-graphite.conf ]; then
+        rm /etc/apache2/sites-available/apache2-graphite.conf
+    fi
+
+fi
+
+#DEBHELPER#
