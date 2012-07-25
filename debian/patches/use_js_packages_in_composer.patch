@@ -1,0 +1,23 @@
+Description: Use javascript packages rather than bundled files in composer.html
+Author: Tom Beresford <tom.beresford@bskyb.com>
+Forwarded: not-needed
+Index: graphite-web/webapp/graphite/templates/composer.html
+===================================================================
+--- graphite-web.orig/webapp/graphite/templates/composer.html	2012-07-25 14:35:16.000000000 +0100
++++ graphite-web/webapp/graphite/templates/composer.html	2012-07-25 14:37:02.000000000 +0100
+@@ -20,11 +20,11 @@
+     <link rel="stylesheet" type="text/css" href="/content/js/ext/resources/css/ext-all.css"/>
+ 
+     {% if jsdebug %}
+-    <script type="text/javascript" src="/content/js/ext/adapter/ext/ext-base-debug.js"></script>
+-    <script type="text/javascript" src="/content/js/ext/ext-all-debug.js"></script>
++    <script type="text/javascript" src="../../../javascript/extjs/adapter/ext/ext-base-debug.js"></script>
++    <script type="text/javascript" src="../../../javascript/extjs/ext-all-debug.js"></script>
+     {% else %}
+-    <script type="text/javascript" src="/content/js/ext/adapter/ext/ext-base.js"></script>
+-    <script type="text/javascript" src="/content/js/ext/ext-all.js"></script>
++    <script type="text/javascript" src="../../../javascript/extjs/adapter/ext/ext-base.js"></script>
++    <script type="text/javascript" src="../../../javascript/extjs/ext-all.js"></script>
+     {% endif %}
+ 
+     <script type="text/javascript">

@@ -18,7 +18,8 @@ Depends: ${misc:Depends}, ${python:Depends},
  python-sqlite,
  libapache2-mod-wsgi,
  libjs-prototype,
- libjs-scriptaculous
+ libjs-scriptaculous,
+ libjs-extjs (>= 3.3.1)
 Suggests: python-memcache, python-ldap
 Description: Enterprise Scalable Realtime Graphing
  Graphite consists of a storage backend and a web-based visualization
