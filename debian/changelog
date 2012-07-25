@@ -6,6 +6,7 @@ graphite-web (0.9.10-1.1) unstable; urgency=low
   * Included install of examples
   * Added config for gbp
   * Patched to stop upstream installer from installing exmaples
+  * Patched so upstream installer doesn't create log dirs
 
  -- Tom Beresford <tom.beresford@bskyb.com>  Wed, 25 Jul 2012 11:55:24 +0100
 

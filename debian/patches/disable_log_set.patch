@@ -1,0 +1,16 @@
+Description: Prevent setup from defining logdirs
+Author: Tom Beresford <tom.beresford@bskyb.com>
+Forwarded: not-needed
+Index: graphite-web/setup.py
+===================================================================
+--- graphite-web.orig/setup.py	2012-07-25 12:01:27.000000000 +0100
++++ graphite-web/setup.py	2012-07-25 12:01:58.000000000 +0100
+@@ -14,7 +14,7 @@
+ 
+ storage_dirs = []
+ 
+-for subdir in ('whisper', 'rrd', 'log', 'log/webapp'):
++for subdir in ('whisper', 'rrd'):
+   storage_dirs.append( ('storage/%s' % subdir, []) )
+ 
+ webapp_content = {}
