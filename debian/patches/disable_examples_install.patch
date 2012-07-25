@@ -1,0 +1,15 @@
+Description: Prevent upstream installer from putting examples into /usr
+Author: Tom Beresford <tom.beresford@bskyb.com>
+Forwarded: not-needed
+Index: graphite-web/setup.py
+===================================================================
+--- graphite-web.orig/setup.py	2012-07-25 12:10:05.000000000 +0100
++++ graphite-web/setup.py	2012-07-25 12:10:26.000000000 +0100
+@@ -60,6 +60,6 @@
+   package_data={'graphite' :
+     ['templates/*', 'local_settings.py.example']},
+   scripts=glob('bin/*'),
+-  data_files=webapp_content.items() + storage_dirs + conf_files + examples,
++  data_files=webapp_content.items() + storage_dirs + conf_files,
+   **setup_kwargs
+ )
