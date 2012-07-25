@@ -1,0 +1,30 @@
+Description: Use javascript packages rather than bundled files in graphlot.html
+Author: Tom Beresford <tom.beresford@bskyb.com>
+Forwarded: not-needed
+Index: graphite-web/webapp/graphite/templates/graphlot.html
+===================================================================
+--- graphite-web.orig/webapp/graphite/templates/graphlot.html	2012-07-25 14:42:52.000000000 +0100
++++ graphite-web/webapp/graphite/templates/graphlot.html	2012-07-25 14:44:31.000000000 +0100
+@@ -1,11 +1,11 @@
+ <html>
+   <head>
+     <title>Graphlot</title>
+-    <script type="text/javascript" src="../content/js/jquery.js"></script>
+-    <script type="text/javascript" src="../content/js/jquery.flot.js"></script>
++    <script type="text/javascript" src="../../../javascript/jquery/jquery.js"></script>
++    <script type="text/javascript" src="../../../javascript/flot/jquery.flot.js"></script>
+     <script type="text/javascript" src="../content/js/jquery.autocomplete.js"></script>
+-    <script type="text/javascript" src="../content/js/jquery.flot.selection.js"></script>
+-    <script type="text/javascript" src="../content/js/jquery.flot.crosshair.js"></script>
++    <script type="text/javascript" src="../../../javascript/flot/jquery.flot.selection.js"></script>
++    <script type="text/javascript" src="../../../javascript/flot/jquery.flot.crosshair.js"></script>
+     <script type="text/javascript" src="../content/js/jquery.graphite.js"></script>
+ 
+     <link rel="stylesheet" type="text/css" href="../content/css/jquery.autocomplete.css" />
+@@ -99,4 +99,4 @@
+ 
+         </div>
+     </body>
+-</html>
+\ No newline at end of file
++</html>

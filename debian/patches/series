@@ -1,3 +1,4 @@
+use_js_packages_in_graphlot.patch
 use_js_packages_in_composer.patch
 use_js_packages_in_cli.patch
 set_local_settings.patch
